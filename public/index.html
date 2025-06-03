@@ -5,23 +5,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
-        body{
-            margin: auto;
-            padding: 0;
-            width: 80vw;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            flex-direction: column;
-        }
-        .text-center{
-            text-align: center;
-        }
     </style>
 </head>
 <body>
-    <h1 class="text-center">Main Index File</h1>
-    <h2 class="text-center">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eligendi perferendis fuga adipisci, fugiat eaque aliquid placeat aut iste unde suscipit!</h2>
+    <button onclick="demo()">demo</button>
+    <script>
+        async function demo(){
+            let response = await fetch('https://express-item-2.onrender.com/test',{
+                method:"GET"
+            });
+            let data = await response;
+            console.log(data);
+        }
+    </script>
 </body>
 </html>
