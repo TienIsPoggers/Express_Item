@@ -14,7 +14,7 @@
             let response = await fetch('https://express-item-2.onrender.com/test',{
                 method:"GET"
             });
-            let data = await response;
+            let data = await response.json();
             console.log(data);
         }
     </script>
